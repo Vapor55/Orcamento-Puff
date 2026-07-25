@@ -50,7 +50,7 @@ public class Main {
             String part_of_material = input_part_of_material.getText();
 
             Calc calc = new Calc(material, price, part_of_material);
-            String result = Integer.toString(calc.Calculate());
+            String result = Double.toString(calc.Calculate());
             text_result.setText(result);
         });
     }
@@ -79,16 +79,16 @@ class Calc {
     }
 
 
-    public int Calculate() {
+    public double Calculate() {
 
-        // Int variables
+        // Long variables
 
-        int int_material = Integer.parseInt(material);
-        int int_price = Integer.parseInt(price);
-        int int_part_of_material = Integer.parseInt(part_of_material);
+        long long_material = Long.parseLong(material);
+        long long_price = Long.parseLong(price);
+        long long_part_of_material = Long.parseLong(part_of_material);
 
-        // Return variable
+        // Return
 
-        return int_price / int_material * int_part_of_material;
+        return (double) ((long_price * 100) / long_material * long_part_of_material) / 100;
     }
 }
