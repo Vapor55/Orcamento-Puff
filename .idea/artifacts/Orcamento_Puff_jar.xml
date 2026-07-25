@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Orcamento-Puff:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Orcamento_Puff_jar</output-path>
+    <root id="archive" name="Orcamento-Puff.jar">
+      <element id="module-output" name="Orcamento-Puff" />
+    </root>
+  </artifact>
+</component>
