@@ -21,6 +21,7 @@ public class Main {
         JTextField input_part_of_material = new JTextField(20);
         JButton buttom_calc = new JButton("Calcular");
         JLabel text_result = new JLabel();
+        JLabel text_help = new JLabel("<html><div style='width: 200px;'>" + "Ao inserir o preço, não use decimal. Exemplo: 1370 que representa R$ 13,70." + "</div></html>");
 
         // Panel
 
@@ -38,6 +39,7 @@ public class Main {
         panel.add(input_part_of_material);
         panel.add(buttom_calc);
         panel.add(text_result);
+        panel.add(text_help);
 
         // Buttom Calc event
 
@@ -89,6 +91,6 @@ class Calc {
 
         // Return
 
-        return (double) ((long_price * 100) / long_material * long_part_of_material) / 100;
+        return (double) (long_price / 100) / long_material * long_part_of_material;
     }
 }
